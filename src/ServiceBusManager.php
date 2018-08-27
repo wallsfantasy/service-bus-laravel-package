@@ -195,7 +195,8 @@ class ServiceBusManager implements ServiceBusManagerContract
         $resolverPlugin->attachToMessageBus($bus);
 
         // Add a logging plugin
-        $logger = $this->app->make('log')->getMonolog();
+        // todo: add log config
+        $logger = $this->app->make('log');
 
         $loggingPlugin = new PsrLoggerPlugin($logger);
 
